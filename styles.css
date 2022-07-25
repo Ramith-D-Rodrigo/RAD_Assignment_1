@@ -4,12 +4,12 @@ html, body {
 }
 
 #background{
-    background-color: black;
+    background-color: rgb(44, 44, 44);
     height: 100vh;
 }
 
 #Title{
-    font-family:sans-serif;
+    font-family:Product sans;
     font-size: 100px;
     color: red;
     text-align: center;
@@ -33,7 +33,7 @@ li{
     text-align: center;
 }
 
-#play_button{
+.button{
     border-radius: 15px;
     background-color: green;
     font-family: fantasy;
@@ -74,6 +74,7 @@ li{
     position:relative;
     text-align: center;
 }
+
 #roll{
     font-size: 40px;
     height:100px;
@@ -88,4 +89,31 @@ li{
 img{
     max-width: 100%;
     max-height: 350px;
+}
+
+#result{
+    position:absolute;
+    height: 300px;
+    width: 600px;
+    background-color: aqua;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    margin:-150px 0 0 -300px;
+    border-color: blue;
+    border-style: solid;
+    border-width: 5px;
+    display:none;
+
+}
+
+#msg{
+    text-align: center;
+    position: relative;
+    font-family: Product Sans;
+    font-style: italic;
+    color:darkred;
+    padding-top: 50px;
+    font-size: 55px;
+
 }

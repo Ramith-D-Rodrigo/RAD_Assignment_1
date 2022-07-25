@@ -10,11 +10,11 @@
                 Dice Game
             </div>
             <div>
-                <div class="scoreboard" id="score_player_one">
-                    Player 1 Score: 0
+                <div class="scoreboard">
+                    Player 1 Score: <text id="score_player_one">0</text>
                 </div>
-                <div class="scoreboard" id="score_player_two">
-                    Player 2 Score: 0
+                <div class="scoreboard">
+                    Player 2 Score: <text id="score_player_two">0</text>
                 </div>
                 <div id = "player_turn">
                     Turn : Player 1
@@ -28,14 +28,22 @@
                         <img src="./Dice_Images/dice_1.png" id="dice_2"></img>
                     </div>
                     <div id="roll_bg">
-                        <button id="roll" onclick="roll_dice()">
+                        <button id="roll">
                             Roll Dice
                         </button>
                     </div>
+
+                </div>
+            </div>
+            <div id="result">
+                <div id="msg">
+                    CONGRATULATIONS!
+                    <div id="winner">
+                    </div>
+                    <button class="button" id="tryagain">Try again</button>
                 </div>
             </div>
         </div>
-
     </body>
     <script src="./game.js"></script>
 </html>
