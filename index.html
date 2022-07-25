@@ -9,16 +9,25 @@
                 Dice Game
             </div>
             <div id="rules">
-                <b>RULES</b> <br><br><br>
-                1) The game requires 2 players.<br>
-                2) The first player to reach wins the game. <br>
-                3) If a player gets the same number (other than one), He gets another chance.<br>
-                4) If a player gets number one, his points will be reduced to 0. <br>
+                <b>RULES</b> <br><br>
+                <ol>
+                    <li>The game requires 2 players.</li>
+                    <li>Winning score : 100</li>
+                    <li>The first player to reach 100 score wins the game.</li>
+                    <li>If 2 dices give the same result (except the dice value 1), the player gets another chance to roll the dices.<br>
+                    Else other player gets the chance.</li>
+                    <li>If both dices give the value 1, that player's score will be reduced to 0.<br>
+                    Else sum of the two dice balues will be added to that player's score.</li>
+                </ol>
             </div>
 
-            <div id="play">
-                Click to start
+            <div id="play_bg">
+                <button id="play_button" onclick="play_button()">
+                    Play
+                </button>
             </div>
         </div>
     </body>
+
+    <script src="./game.js"></script>
 </html>

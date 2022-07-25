@@ -24,11 +24,50 @@ html, body {
     font-size: 30px;
     margin-left: 5%;
 }
+li{
+    padding: 8px;
+}
 
-#play{
+#play_bg{
+    margin:50px;
+    text-align: center;
+}
+
+#play_button{
     border-radius: 15px;
     background-color: green;
-    margin-top:50px;
-    width: 100px;
+    font-family: fantasy;
+    width: 150px;
     height: 50px;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    line-height: 50px;
+}
+
+#player_turn{
+    font-family: Cambria;
+    font-size: 60px;
+    margin-top: 10px;
+    color: purple;
+    text-align: center;
+    padding-top: 3%;
+    width:100%;
+}
+
+.scoreboard{
+    width:50%;
+    height:auto;
+    margin-top: 40px;
+    float:left;
+    text-align: center;
+    font-family: Lucida Sans;
+    color: white;
+    font-size: 45px;
+}
+
+.disc{
+    object-fit: contain;
+    float: left;
 }
