@@ -35,15 +35,14 @@ function generate_num(){
 let dice_set = new Array(); //to store the dice images
 
 for(i = 0; i < 6; i++){ //storing the images
-    dice_set[i] = new Image();
-    dice_set[i].src = './Dice_Images/dice_'+(i+1)+'.png';
+    dice_set[i] = './Dice_Images/dice_'+(i+1)+'.png';
 }
 
 function random_image(){
     var dice1 = document.getElementById("dice_1");
     var dice2 = document.getElementById("dice_2");
-    dice1.src = "./Dice_Images/dice_3.png";
-    dice2 = dice_set[generate_num()-1];
+    dice1.src = dice_set[generate_num()-1];
+    dice2.src = dice_set[generate_num()-1];
     console.log(dice1);
 }
 
