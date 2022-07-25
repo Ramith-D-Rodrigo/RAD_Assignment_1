@@ -12,4 +12,19 @@ function turn(){
     player.innerHTML = "Turn : Player " + new_turn; //change turn accordingly
     turn_val++;
 }
+function roll_dice(){
+    var button = document.getElementById('roll');
+    button.innerHTML = "Rolling";
+    button.style.backgroundColor = "darkgreen";
+    var dice1 = document.getElementById('dice_1');
+    var dice2 = document.getElementById('dice_2');
+
+}
+let dice_set = new Array(); //to store the dice images
+
+for(i = 0; i < 6; i++){ //storing the images
+    dice_set[i] = new Image();
+    dice_set[i].src = './Dice_Images/dice_'+toString(i+1)+'.png';
+}
+
 

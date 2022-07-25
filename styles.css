@@ -37,13 +37,9 @@ li{
     border-radius: 15px;
     background-color: green;
     font-family: fantasy;
-    width: 150px;
-    height: 50px;
-    font-size: 25px;
-    text-align: center;
-    vertical-align: middle;
+    font-size: 60px;
+    padding: 10px;
     cursor: pointer;
-    line-height: 50px;
 }
 
 #player_turn{
@@ -67,7 +63,29 @@ li{
     font-size: 45px;
 }
 
-.disc{
+.dice{
     object-fit: contain;
+    width:auto;
     float: left;
+    margin: 100px;
+}
+
+#roll_bg{
+    position:relative;
+    text-align: center;
+}
+#roll{
+    font-size: 40px;
+    height:100px;
+    width:200px;
+    border-radius: 15px;
+    background-color: green;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 200px;
+    margin-left: -100px;
+}
+img{
+    max-width: 100%;
+    max-height: 350px;
 }
