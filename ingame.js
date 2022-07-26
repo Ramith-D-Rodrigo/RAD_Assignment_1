@@ -25,11 +25,10 @@ const roll_button = document.getElementById("roll");
 
 
 roll_button.addEventListener("click", function(){
-    if(this.innerHTML == "Rolling"){ //do not continue while rolling
-        return;
-    }
+
     this.innerHTML = "Rolling";
     this.style.backgroundColor = "darkgreen";
+    this.disabled = true; //disable while rolling
 
     var player = document.getElementById("player_turn");
     var turn;
@@ -74,6 +73,7 @@ roll_button.addEventListener("click", function(){
 
         dice1.src = dice_set[dice1_val-1];  //actual rolled dices' images
         dice2.src = dice_set[dice2_val-1];
+        this.disabled = false;  //re enable the button
 
         if(parseInt(score.innerHTML) >= 100){ //if one player has reached 100 score
             var notification = document.getElementById("result");
