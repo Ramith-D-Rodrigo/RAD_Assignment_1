@@ -4,12 +4,12 @@ html, body {
 }
 
 #background{
-    background-color: rgb(44, 44, 44);
+    background-color: white;
     height: 100vh;
 }
 
 #Title{
-    font-family:Product sans;
+    font-family:Product sans, Cambria;
     font-size: 100px;
     color: red;
     text-align: center;
@@ -18,12 +18,13 @@ html, body {
 }
 
 #rules{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Product sans, Cambria;
     color: blue;
     padding-top: 6%;
     font-size: 30px;
     margin-left: 5%;
 }
+
 li{
     padding: 8px;
 }
@@ -36,14 +37,14 @@ li{
 .button{
     border-radius: 15px;
     background-color: green;
-    font-family: fantasy;
     font-size: 60px;
+    font-family:Product sans, Cambria;
     padding: 10px;
     cursor: pointer;
 }
 
 #player_turn{
-    font-family: Cambria;
+    font-family:Product sans, Cambria;
     font-size: 60px;
     margin-top: 10px;
     color: purple;
@@ -58,8 +59,8 @@ li{
     margin-top: 40px;
     float:left;
     text-align: center;
-    font-family: Lucida Sans;
-    color: white;
+    font-family:Product sans, Cambria;
+    color: black;
     font-size: 45px;
 }
 
@@ -68,6 +69,7 @@ li{
     width:auto;
     float: left;
     margin: 100px;
+    filter: drop-shadow(2px 5px 3px grey);
 }
 
 #roll_bg{
@@ -85,6 +87,7 @@ li{
     position: absolute;
     margin-top: 200px;
     margin-left: -100px;
+    box-shadow: 0 0 4px 0;
 }
 img{
     max-width: 100%;
@@ -92,7 +95,7 @@ img{
 }
 
 #result{
-    position:absolute;
+    position: absolute;
     height: 300px;
     width: 600px;
     background-color: aqua;
@@ -100,20 +103,29 @@ img{
     top: 50%;
     left: 50%;
     margin:-150px 0 0 -300px;
-    border-color: blue;
-    border-style: solid;
-    border-width: 5px;
-    display:none;
-
+    box-shadow:0 0 10px 0;
+    border-width: 1px;
+    display: none;
 }
-
+.final_button{
+    border-radius: 15px;
+    background-color: lightblue;
+    font-size: 40px;
+    font-family:Product sans, Cambria;
+    padding: 10px;
+    cursor: pointer;
+    border-width: 1px;
+}
 #msg{
     text-align: center;
     position: relative;
-    font-family: Product Sans;
-    font-style: italic;
+    font-family:Product sans, Cambria;
     color:darkred;
     padding-top: 50px;
-    font-size: 55px;
+    font-size: 50px;
+}
 
+#close{
+    float: right;
+    margin-right: 10px;
 }
