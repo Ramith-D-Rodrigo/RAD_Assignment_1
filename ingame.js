@@ -14,6 +14,13 @@ function generate_num(){    //function to generate numbers between 1 and 6
     return num;
 }
 
+let dice_set = new Array(); //to store the dice images
+
+for(i = 0; i < 6; i++){ //storing the images' reference links
+    dice_set[i] = new Image();
+    dice_set[i] = './Dice_Images/dice_'+(i+1)+'.png';
+}
+
 function random_image(){    //getting random images for the dices
     var dice1 = document.getElementById("dice_1");
     var dice2 = document.getElementById("dice_2");
@@ -32,47 +39,41 @@ roll_button.addEventListener("click", function(){
 
     var player = document.getElementById("player_turn");
     var turn;
+    var score; //to store player score
     if(player.innerHTML.includes("1")){   //check whose turn is it
         turn = 1;   //assign the turn
-    }
-    else{
-        turn = 2;
-    }
-    var score;
-    if(turn == 1){
         score = document.getElementById("score_player_one");
     }
     else{
-        score = document.getElementById("score_player_two");       
+        turn = 2;
+        score = document.getElementById("score_player_two"); 
     }
-    var dice1_val, dice2_val;
-    dice1_val = generate_num(); //player's rolled dice 1 value
-    dice2_val = generate_num(); //player's rolled dice 2 value
-    console.log(dice1_val, dice2_val);
 
     var dice_shuffle = setInterval("random_image()", 75); //start rolling animation
 
     setTimeout(() => {  //end rolling animation and find the rolled dices
+        clearInterval(dice_shuffle);
+        var dice1 = document.getElementById("dice_1"); //rolled dice 1
+        var dice2 = document.getElementById("dice_2");  //rolled dice 2
+        var dice1_val = parseInt(dice1.src.charAt(dice1.src.length - 5)); //dice 1 value
+        var dice2_val = parseInt(dice2.src.charAt(dice2.src.length - 5)); //dice 2 value
+
+        console.log(dice1_val, dice2_val);
+
         if(dice1_val == 1 && dice2_val == 1){   //getting 1 on both dices
             score.innerHTML = 0;
             changeturn();   //change the turn
         }
-        else if(dice1_val == dice2_val){    //getting same value on both dices
-            score.innerHTML = parseInt(score.innerHTML) + dice1_val * 2;
+        else if(dice1.src == dice2.src){    //getting same value on both dices
+            score.innerHTML = parseInt(score.innerHTML) + parseInt(dice1_val) * 2;
         }
         else{
             score.innerHTML = parseInt(score.innerHTML) + dice1_val + dice2_val;
             changeturn(); //change the turn
         }
+
         this.innerHTML = "Roll Dice"; //revert back
         this.style.backgroundColor = "green";
-        clearInterval(dice_shuffle);
-
-        var dice1 = document.getElementById("dice_1");
-        var dice2 = document.getElementById("dice_2");
-
-        dice1.src = dice_set[dice1_val-1];  //actual rolled dices' images
-        dice2.src = dice_set[dice2_val-1];
         this.disabled = false;  //re enable the button
 
         if(parseInt(score.innerHTML) >= 100){ //if one player has reached 100 score
@@ -85,13 +86,6 @@ roll_button.addEventListener("click", function(){
     },2000);
 
 });
-
-
-let dice_set = new Array(); //to store the dice images
-
-for(i = 0; i < 6; i++){ //storing the images' reference links
-    dice_set[i] = './Dice_Images/dice_'+(i+1)+'.png';
-}
 
 
 const try_again_btn = document.getElementById("tryagain");  //try again event
