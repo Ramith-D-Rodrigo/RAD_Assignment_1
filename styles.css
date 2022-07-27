@@ -98,11 +98,13 @@ img{
     position: absolute;
     height: 300px;
     width: 600px;
-    background-color: aqua;
+    background-color: rgba(0,255,255,0.4);
     border-radius: 20px;
     top: 50%;
     left: 50%;
     margin:-150px 0 0 -300px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow:0 0 10px 0;
     border-width: 1px;
     display: none;
