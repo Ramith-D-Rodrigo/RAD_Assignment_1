@@ -1,11 +1,11 @@
 
-let turn_val = 1;   //starting turn (player 1 -> turn = 1 and player 2 -> turn = 2)
+let turn_val = 1;   //starting turn is 1 (player 1 -> turn = 1 and player 2 -> turn = 2)
 
 function changeturn(){
     var player = document.getElementById('player_turn');
-    var new_turn = (turn_val % 2) + 1;
-    player.innerHTML = "Turn : Player " + new_turn; //change turn accordingly
-    turn_val++;
+    turn_val = (turn_val % 2) + 1;
+    player.innerHTML = "Turn : Player " + turn_val; //change turn accordingly
+    //console.log("next turn: " +turn_val);
 }
 
 function generate_num(){    //function to generate numbers between 1 and 6
