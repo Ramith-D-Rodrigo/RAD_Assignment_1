@@ -49,7 +49,7 @@ roll_button.addEventListener("click", function(){
         score = document.getElementById("score_player_two"); 
     }
 
-    var dice_shuffle = setInterval("random_image()", 75); //start rolling animation
+    var dice_shuffle = setInterval(random_image, 75); //start rolling animation
 
     setTimeout(() => {  //end rolling animation and find the rolled dices
         clearInterval(dice_shuffle);
