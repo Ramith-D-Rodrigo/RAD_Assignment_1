@@ -76,6 +76,7 @@ roll_button.addEventListener("click", function(){
         this.innerHTML = "Roll Dice"; //revert back
         this.style.backgroundColor = "green";
         this.disabled = false;  //re enable the button
+        this.style.cursor = "pointer"; //pointer cursor
 
         if(parseInt(score.innerHTML) >= 100){ //if one player has reached 100 score
             var notification = document.getElementById("result");
