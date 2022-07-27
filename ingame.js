@@ -18,14 +18,15 @@ let dice_set = new Array(); //to store the dice images
 
 for(i = 0; i < 6; i++){ //storing the images' reference links
     dice_set[i] = new Image();
-    dice_set[i] = './Dice_Images/dice_'+(i+1)+'.png';
+    dice_set[i].src = './Dice_Images/dice_'+(i+1)+'.png';
 }
+//console.log(dice_set);
 
 function random_image(){    //getting random images for the dices
     var dice1 = document.getElementById("dice_1");
     var dice2 = document.getElementById("dice_2");
-    dice1.src = dice_set[generate_num()-1];
-    dice2.src = dice_set[generate_num()-1];
+    dice1.src = dice_set[generate_num()-1].src;
+    dice2.src = dice_set[generate_num()-1].src;
 }
 
 const roll_button = document.getElementById("roll");
