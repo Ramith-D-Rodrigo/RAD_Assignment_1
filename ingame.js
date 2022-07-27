@@ -36,6 +36,7 @@ roll_button.addEventListener("click", function(){
     this.innerHTML = "Rolling";
     this.style.backgroundColor = "darkgreen";
     this.disabled = true; //disable while rolling
+    this.style.cursor = "default"; //default cursor
 
     var player = document.getElementById("player_turn");
     var turn;
@@ -82,6 +83,7 @@ roll_button.addEventListener("click", function(){
             var winner = document.getElementById('winner');
             winner.innerHTML = "Winner is Player " + turn;  //print the winner
             this.disabled = true;   //cannot continue anymore
+            this.style.cursor = "default"; //default cursor
         }
     },2000);
 
