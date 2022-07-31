@@ -66,7 +66,7 @@ roll_button.addEventListener("click", function(){
             score.innerHTML = 0;
             changeturn();   //change the turn
         }
-        else if(dice1.src == dice2.src){    //getting same value on both dices
+        else if(dice1_val == dice2_val){    //getting same value on both dices
             score.innerHTML = parseInt(score.innerHTML) + parseInt(dice1_val) * 2;
         }
         else{
